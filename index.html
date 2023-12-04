@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fast Load and access</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            margin: 20px 100px;
+            align-items: center;
+        }
+        .icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .link-info {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .copy-button {
+            cursor: pointer;
+        }
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="margin-bottom: 50px;">Welcome to Your GitHub Pages Site</h1>
+
+    <ul>
+        <li>
+            <i class="fas fa-link icon"></i>
+            <div class="link-info">
+                <strong>GitHub Profile:</strong>
+                <a href="https://github.com/Gizaw-Agodo" target="_blank">
+                    https://github.com/Gizaw-Agodo
+                </a>
+            </div>
+            <span class="copy-button" onclick="copyToClipboard('https://github.com/Gizaw-Agodo')">
+                <i class="far fa-copy"></i>
+            </span>
+        </li>
+        <hr>
+        <li>
+            <i class="fab fa-linkedin icon"></i>
+            <div class="link-info">
+                <strong>LinkedIn Profile:</strong>
+                <a href="https://www.linkedin.com/in/gizaw-agodo-671390218/" target="_blank">
+                    https://www.linkedin.com/in/gizaw-agodo-671390218/
+                </a>
+            </div>
+            <span class="copy-button" onclick="copyToClipboard('https://www.linkedin.com/in/gizaw-agodo-671390218/')">
+                <i class="far fa-copy"></i>
+            </span>
+        </li>
+        <hr>
+        <li>
+            <i class="fas fa-folder-open icon"></i>
+            <div class="link-info">
+                <strong>Portfolio:</strong>
+                <a href="https://my-portifolio-2.netlify.app/" target="_blank">
+                    https://my-portifolio-2.netlify.app/
+                </a>
+            </div>
+            <span class="copy-button" onclick="copyToClipboard('https://my-portifolio-2.netlify.app/')">
+                <i class="far fa-copy"></i>
+            </span>
+        </li>
+        <hr>
+        <li>
+            <i class="fas fa-code icon"></i>
+            <div class="link-info">
+                <strong>Special Project Repository:</strong>
+                <a href="https://github.com/your-username/special-project-repo" target="_blank">
+                    https://github.com/your-username/special-project-repo
+                </a>
+            </div>
+            <span class="copy-button" onclick="copyToClipboard('https://github.com/your-username/special-project-repo')">
+                <i class="far fa-copy"></i>
+            </span>
+        </li>
+    </ul>
+
+    <script>
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Link copied to clipboard: ' + text);
+        }
+    </script>
+
+</body>
+</html>
